@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
       self.post_categories.build(category: category)
     end
     # we are only creating a new categor if it does not already exist with the current name. 
-    # we call self.categories which reurns an array of Category objects.
+    # we call  self.categories which reurns an array of Category objects.
     
   end
 
