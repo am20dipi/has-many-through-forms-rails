@@ -20,5 +20,10 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :content, category_ids:[], categories_attributes: [:name])
+    # we set up our post_params to expect a key of :category_ids with a value of an empty array.
+    # our params hash will have a key of :categories_attributes nested under :post
+    # we set up the :categories_attributes to expect a key of name for a category's name
+    
+
   end
 end
